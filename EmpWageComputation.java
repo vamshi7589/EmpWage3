@@ -84,3 +84,4 @@ public class EmployeeWageComputation
 		System.out.println("Monthly Wage of Reliance is "+reliance.totalEmpWage);
 	}
 }
+
