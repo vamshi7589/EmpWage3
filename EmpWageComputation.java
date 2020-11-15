@@ -31,6 +31,11 @@ public class EmployeeWageComputation implements IComputeEmpWage
 		}
 	}
 
+	@Override
+	public int getTotalWage(String company) {
+		return companyToEmpWageMap.get(company).totalEmpWage;
+	}
+
 	public int computeEmpWage(CompanyEmpWage companyEmpWage) {
 		int empHours=0, totalEmpHours=0, totalWorkingDays=0;
 		while(totalEmpHours<=companyEmpWage.maxHoursPerMonth && totalWorkingDays<companyEmpWage.numOfWorkingDays) {
@@ -64,5 +69,6 @@ public class EmployeeWageComputation implements IComputeEmpWage
 		e.addCompanyEmpWage("DMart",20,2,10);
 		e.addCompanyEmpWage("Reliance",10,4,20);
 		e.computeEmpWage();
+		System.out.println("total wage for Dmart company is :"+ e.getTotalWage("DMart"));
 	}
 }
