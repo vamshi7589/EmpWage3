@@ -57,3 +57,4 @@ public class EmployeeWageComputation implements IComputeEmpWage
 		e.computeEmpWage();
 	}
 }
+}
